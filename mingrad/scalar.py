@@ -2,7 +2,7 @@
 class Scalar:
   """ stores a single scalar value and its gradient """
 
-  def __init__(self, data, _parents=(), _op=''):
+  def __init__(self, data, _parents=(), _op=None):
     self.data = data
     self.grad = 0
     # variables used for autograd graph construction
@@ -34,7 +34,7 @@ class Scalar:
 
   def __pow__(self, other):
     assert isinstance(other, (int, float)), "only supporting int/float powers for now"
-    out = Scalar(self.data**other, (self,), f'**{other}')
+    out = Scalar(self.data**other, (self,), f'^{other}')
 
     def _backward():
       self.grad += (other * self.data**(other-1)) * out.grad

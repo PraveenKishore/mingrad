@@ -40,10 +40,10 @@ To run this project, follow the below setup instructions.
 
 ## Usage:
 ```python
-a = Scalar(1.5)
-b = Scalar(-4.0)
-c = a**3 / 5
-d = c + (b**2).relu()
+a = Scalar(2)
+b = Scalar(-6.5)
+c = a*5 / 2
+d = c + (b**6).relu()
 
 # compute gradients
 d.backward()

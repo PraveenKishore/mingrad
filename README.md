@@ -16,8 +16,29 @@ This project is ideal for:
 * **Minimal Codebase**: The entire implementation is concise and easy to follow, with fewer than 300 lines of code.
 * **Educational Focus**: Designed to help you learn the fundamentals of deep learning and autograd systems.
 
-## Usage:
+## Setup
+This project uses [uv](https://docs.astral.sh/uv/) for package/project management. 
+To run this project, follow the below setup instructions.
 
+1. Install uv if you haven't already. [Here's](https://docs.astral.sh/uv/getting-started/installation/) the installation instructions.
+2. Clone the repository:
+```bash
+git clone https://github.com/PraveenKishore/mingrad.git
+cd mingrad
+```
+3. Create virtual env and install dependencies.
+```bash
+uv sync
+```
+4. Activate the virtual env.
+```bash
+source .venv/bin/activate  # Activate the virtual environment (Linux/MacOS)
+# OR
+.\.venv\Scripts\activate  # Activate the virtual environment (Windows)
+```
+5. You're all set!
+
+## Usage:
 ```python
 a = Scalar(1.5)
 b = Scalar(-4.0)
